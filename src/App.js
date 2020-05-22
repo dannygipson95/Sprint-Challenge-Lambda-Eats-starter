@@ -30,7 +30,6 @@ const initialFormErrors = {
   sauce: '',
 }
 
-const allOrders = [initialFormValues]
 
 
 
@@ -38,7 +37,6 @@ const App = () => {
   const [values, setValues] = useState(initialFormValues);
   const [disabled, setDisabled] = useState(true);
   const [errors, setErrors] = useState(initialFormErrors)
-  const [orders, setOrders] = useState(allOrders) 
 
   const sendOrder = order => {
     axios.post('https://reqres.in/api/users', order)
@@ -93,8 +91,8 @@ const App = () => {
   }
 
   const onSubmit = event => {
-    event.preventDefault()
 
+    event.preventDefault();
     const newOrder = {
       name: values.name,
       size: values.size,
@@ -104,6 +102,7 @@ const App = () => {
       specialInstructions: values.specialInstructions
     }
     sendOrder(newOrder)
+    console.log(newOrder)
   }
 
   useEffect(() => {
@@ -117,7 +116,6 @@ const App = () => {
     <Switch>
       <Route exact path='/'>
         <h1>Lambda Eats</h1>
-        <p>You can remove this code and create your own header</p>
         <Link to='/pizza'>Make an Order</Link>
       </Route>
 

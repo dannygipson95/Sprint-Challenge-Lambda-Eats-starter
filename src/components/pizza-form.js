@@ -1,5 +1,6 @@
 import React from 'react'
 import {CheckboxDiv, StyledForm} from '../styledComponents/styledform'
+import {Link} from 'react-router-dom'
 
 export default function Form(props) {
     const {
@@ -13,6 +14,7 @@ export default function Form(props) {
 
     return(
         <StyledForm onSubmit={onSubmit}>
+        <Link to='/'>Return Home</Link>
             <h1>Make an Order</h1>
 
             <div className='errors'>
@@ -55,6 +57,7 @@ export default function Form(props) {
             <label>
                 Classic Red 
                 <input
+                className='classicRed'
                 type='radio'
                 name='sauce'
                 value='classicRed'
@@ -65,6 +68,7 @@ export default function Form(props) {
             <label>
                 Garlic Alfredo 
                 <input
+                className='garlicAlfredo'
                 type='radio'
                 name='sauce'
                 value='garlicAlfredo'
@@ -75,6 +79,7 @@ export default function Form(props) {
             <label>
                 Creamy Pesto  
                 <input
+                className='creamyPesto'
                 type='radio'
                 name='sauce'
                 value='creamyPesto'
@@ -85,6 +90,7 @@ export default function Form(props) {
             <label>
                 Barbeque 
                 <input
+                className='barbeque'
                 type='radio'
                 name='sauce'
                 value='barbeque'

@@ -14,7 +14,7 @@ export const StyledForm = styled.form`
     }
 
     label{
-        margin-left: 1%;
+        margin: 1%;
     }
 `
 
@@ -24,4 +24,5 @@ export const CheckboxDiv = styled.div`
     justify-content: space-around;
     width: 70%;
     margin: 4% 15%; */
+    width: 68%;
 `
